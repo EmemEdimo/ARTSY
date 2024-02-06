@@ -1,0 +1,161 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$primary-color: #292929;
+
+// UTILITIES
+.header-sec {
+  font-family: "Satoshi", sans-serif;
+  font-size: 4.8rem;
+  font-weight: 500;
+  line-height: 6.5rem;
+}
+
+.header-tet {
+  font-family: "Clash Display", sans-serif;
+  font-size: 3.6rem;
+  font-weight: 500;
+  line-height: 4.4rem;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Satoshi", sans-serif;
+}
+.fonts {
+  font-family: "STIX Two Text", serif;
+  font-family: "Clash Display", sans-serif;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  transition: all 0.25s ease-in-out;
+  // position: relative;
+}
+
+a:hover {
+  color: orangered;
+}
+
+.active {
+  border-bottom: 2px solid #292929;
+}
+
+.active:hover {
+  border-bottom: 2px solid orangered;
+}
+.nav {
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem calc((100vw - 1200px) / 2);
+  margin-top: 2rem;
+  // border: 1px solid red;
+
+  &__logo {
+    color: #292929;
+    text-decoration: none;
+    font-family: "STIX Two Text", serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 9rem;
+  }
+
+  &__menu--item {
+    margin: 0 2rem;
+    font-size: 2.4rem;
+    font-weight: 500;
+    // line-height: 3.2rem;
+    font-family: inherit;
+  }
+
+  &__icons {
+    .fa {
+      color: $primary-color;
+      font-size: 2.4rem;
+      padding: 0 1.2rem;
+      transition: all 0.25s ease-in-out;
+      cursor: pointer;
+    }
+
+    .fa:hover {
+      color: orangered;
+    }
+  }
+}
+
+// Hero Style
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 1rem calc((100vw - 1200px) / 2);
+  overflow-x: hidden;
+
+  &__text {
+    &--header {
+      font-family: "Clash Display", sans-serif;
+      font-size: clamp(1.8rem, 5vw, 6.4rem);
+      font-weight: 500;
+      line-height: 10rem;
+      margin-top: 2rem;
+    }
+
+    &--para {
+      font-size: clamp(1.5rem, 2.5vw, 2.8rem);
+      // font-size: 2.8rem;
+      font-weight: 500;
+      line-height: 43.8px;
+      padding: 1rem calc((100vw - 1100px) / 2);
+      margin-top: 5rem;
+    }
+  }
+
+  &__img {
+    width: 100vw;
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(auto, 15rem);
+    column-gap: 1rem;
+
+    &--1 {
+      grid-column: 1/2;
+      grid-row: 3/8;
+    }
+    &--2 {
+      grid-column: 2/3;
+      grid-row: 2/9;
+    }
+    &--3 {
+      grid-column: 3/4;
+      grid-row: 1/8;
+    }
+    &--4 {
+      grid-column: 4/5;
+      grid-row: 2/9;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+// Featured Sectioon
+.featured {
+  padding: 1rem calc((100vw - 1200px) / 2);
+}
