@@ -23,6 +23,11 @@ $primary-color: #292929;
   line-height: 4.4rem;
 }
 
+img {
+  width: 100%;
+  height: 100%;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -119,7 +124,7 @@ a:hover {
       font-weight: 500;
       line-height: 43.8px;
       padding: 1rem calc((100vw - 1100px) / 2);
-      margin-top: 5rem;
+      margin: 5rem;
     }
   }
 
@@ -147,15 +152,70 @@ a:hover {
       grid-column: 4/5;
       grid-row: 2/9;
     }
-
-    img {
-      width: 100%;
-      height: 100%;
-    }
   }
 }
 
 // Featured Sectioon
 .featured {
   padding: 1rem calc((100vw - 1200px) / 2);
+  margin: 10rem 0;
+
+  .product {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    padding: 6rem 0;
+    margin-top: 2rem;
+    border-top: 0.5px solid #333333;
+
+    &--text {
+      padding: 2rem 0;
+      p {
+        font-size: 2.4rem;
+        font-weight: 400;
+        line-height: 3.24rem;
+        padding-top: 4rem;
+      }
+    }
+
+    &__footer {
+      display: flex;
+      padding-top: 3rem;
+
+      .creators {
+        display: flex;
+        align-items: center;
+
+        .creator {
+          height: 5.1rem;
+          width: 5.1rem;
+          border-radius: 50%;
+          border: 1px solid #78a3ad;
+        }
+
+        .creator:not(:first-child) {
+          margin-left: -2.2rem;
+        }
+      }
+
+      .creators-count {
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 2.7rem;
+        margin-left: 1.5rem;
+      }
+
+      .featured-cta {
+        font-size: 6rem;
+        color: #272727;
+        margin-left: auto;
+        cursor: pointer;
+        transition: all 0.3s ease-in;
+
+        &:hover {
+          color: #78a3ad;
+        }
+      }
+    }
+  }
 }
